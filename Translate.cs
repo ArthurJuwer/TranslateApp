@@ -42,10 +42,10 @@ namespace Translate
         }
         private void Translate_Load(object sender, EventArgs e)
         {
-            cmbSourceLanguage.Items.AddRange(new string[] {"en", "es", "fr", "de", "pt"});
-            cmbTargetLanguage.Items.AddRange(new string[] { "en", "es", "fr", "de", "pt" });
+            cmbSourceLanguage.Items.AddRange(new string[] {"english", "french", "italian", "portuguese", "spanish", "russian"});
+            cmbTargetLanguage.Items.AddRange(new string[] {"english", "french", "italian", "portuguese", "spanish", "russian" });
             cmbSourceLanguage.SelectedIndex = 0;
-            cmbTargetLanguage.SelectedIndex = 1;
+            cmbTargetLanguage.SelectedIndex = 3;
         }
         
         public class TranslationReponse
@@ -74,6 +74,29 @@ namespace Translate
                 MessageBox.Show("Erro" + ex);
                 throw;
             }
+        }
+
+        
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            int sourceAtual = cmbSourceLanguage.SelectedIndex;
+            int targetAtual = cmbTargetLanguage.SelectedIndex;
+            string invertInput = textInput.Text;
+            string invertOutput = textOutput.Text;
+            // salvar em variantes e armazenar os dados
+
+            if (textInput.Text == "Digite Aqui...")
+            {
+                MessageBox.Show("Digite algo primeiro para inverter");
+                return;
+            }
+
+
+            cmbSourceLanguage.SelectedIndex = targetAtual;
+            cmbTargetLanguage.SelectedIndex = sourceAtual;
+            textInput.Text = invertOutput;
+            textOutput.Text = invertInput;
         }
     }
 }
