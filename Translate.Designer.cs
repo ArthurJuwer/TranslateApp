@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(884, 632);
+            this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.btnTraduzir);
             this.Controls.Add(this.cbTargetLanguage);
             this.Controls.Add(this.cbSourceLanguage);

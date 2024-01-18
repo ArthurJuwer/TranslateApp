@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// adicionar using
+// instalar pacote nuGet
+using Newtonsoft.Json;
+
 
 namespace Translate
 {
